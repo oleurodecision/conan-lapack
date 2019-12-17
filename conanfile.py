@@ -63,7 +63,7 @@ class LapackConan(ConanFile):
         if tools.os_info.is_linux:
             if tools.os_info.with_pacman or \
                 tools.os_info.with_yum:
-                installer.install("gcc-fortran")
+                installer.install("gcc-gfortran")
             else:
                 installer.install("gfortran")
                 versionfloat = Version(self.settings.compiler.version.value)
